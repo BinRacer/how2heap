@@ -78,7 +78,9 @@ This one tells linker to link the target binary with the target libc.
 ```shell
 git clone https://github.com/shellphish/how2heap
 cd how2heap
-H2H_USE_SYSTEM_LIBC=N make v2.23
+make v2.23
+make H2H_LIBC_MODE=CUSTOM v2.23
+make H2H_LIBC_MODE=AIO v2.23
 ```
 This will link all the binaries against corresponding libcs. What's better is that it comes with debug symbols. Now you can play with any libc versions on your host machine.
 In this example, it will compile all glibc-2.23 binaries and link them with libc-2.23. You can change the number to play with other libc versions.
